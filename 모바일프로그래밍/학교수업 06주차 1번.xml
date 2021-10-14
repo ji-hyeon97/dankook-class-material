@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="To"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Subject"
+        android:inputType="textPersonName"
+        android:text="Subject"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:ems="10"
+        android:gravity="clip_vertical"
+        android:hint="Message"
+        android:inputType="textPersonName"
+        android:text="Message"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/button49"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:gravity="right"
+        android:text="Send"
+        android:textColor="#000000"
+        app:backgroundTint="#D3D3D3" />
+    <!--교수님 ppt 에는 버튼에 SEND 라는 텍스트 문구가 가운데에 있지만 gravity="right"을 하게되면
+    SEND 문구가 오른쪽으로 가게 됩니다. 우선 버튼을 오른쪽으로 배치하기 위해 layout_gravity 를 사용했습니다.
+    하지만 조건에는 gravity="right"라는 문구가 있기에 이를 사용하였습니다. -->
+</LinearLayout>
