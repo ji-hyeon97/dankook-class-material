@@ -1,6 +1,0 @@
-<resources>
-    <string name="app_name">sayHello</string>
-    <string name="button_text">나는 버튼</string>
-    <string name="hello">안녕하세요</string>
-<!-- 오타를 방지하기 위해서 strings.xml작성 + 다국어 관리 가능-->
-</resources>
