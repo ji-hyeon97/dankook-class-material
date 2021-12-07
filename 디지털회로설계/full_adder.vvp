@@ -1,0 +1,69 @@
+#! /usr/local/iverilog/bin/vvp
+:ivl_version "11.0 (devel)" "(s20150603-642-g3bdb50da)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "vhdl_textio";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_00000000012ddc00 .scope module, "full_adder_tb" "full_adder_tb" 2 1;
+ .timescale 0 0;
+v00000000008c0430_0 .var "Cin", 0 0;
+v00000000008c0390_0 .net "Cout", 0 0, L_0000000000872d60;  1 drivers
+v00000000008c07f0_0 .var "In1", 0 0;
+v00000000008c04d0_0 .var "In2", 0 0;
+v00000000008c0250_0 .net "Sum", 0 0, L_00000000012de440;  1 drivers
+S_00000000012ddeb0 .scope module, "uut" "full_adder" 2 4, 3 1 0, S_00000000012ddc00;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "In1";
+    .port_info 1 /INPUT 1 "In2";
+    .port_info 2 /INPUT 1 "Cin";
+    .port_info 3 /OUTPUT 1 "Sum";
+    .port_info 4 /OUTPUT 1 "Cout";
+L_00000000012daea0 .functor XOR 1, v00000000008c07f0_0, v00000000008c04d0_0, C4<0>, C4<0>;
+L_00000000012de440 .functor XOR 1, L_00000000012daea0, v00000000008c0430_0, C4<0>, C4<0>;
+L_00000000008729f0 .functor AND 1, v00000000008c07f0_0, v00000000008c04d0_0, C4<1>, C4<1>;
+L_0000000000872a60 .functor AND 1, v00000000008c04d0_0, v00000000008c0430_0, C4<1>, C4<1>;
+L_0000000000872b60 .functor OR 1, L_00000000008729f0, L_0000000000872a60, C4<0>, C4<0>;
+L_0000000000872bd0 .functor AND 1, v00000000008c0430_0, v00000000008c07f0_0, C4<1>, C4<1>;
+L_0000000000872d60 .functor OR 1, L_0000000000872b60, L_0000000000872bd0, C4<0>, C4<0>;
+v00000000012ddd90_0 .net "Cin", 0 0, v00000000008c0430_0;  1 drivers
+v00000000012db960_0 .net "Cout", 0 0, L_0000000000872d60;  alias, 1 drivers
+v00000000012dae00_0 .net "In1", 0 0, v00000000008c07f0_0;  1 drivers
+v00000000012de040_0 .net "In2", 0 0, v00000000008c04d0_0;  1 drivers
+v00000000012de0e0_0 .net "Sum", 0 0, L_00000000012de440;  alias, 1 drivers
+v00000000012de180_0 .net *"_s0", 0 0, L_00000000012daea0;  1 drivers
+v00000000012de220_0 .net *"_s10", 0 0, L_0000000000872bd0;  1 drivers
+v00000000008c0c50_0 .net *"_s4", 0 0, L_00000000008729f0;  1 drivers
+v00000000008c0d90_0 .net *"_s6", 0 0, L_0000000000872a60;  1 drivers
+v00000000008c0110_0 .net *"_s8", 0 0, L_0000000000872b60;  1 drivers
+    .scope S_00000000012ddc00;
+T_0 ;
+    %vpi_call 2 7 "$dumpfile", "full_adder.vcd" {0 0 0};
+    %vpi_call 2 8 "$dumpvars", 32'sb00000000000000000000000000000000, S_00000000012ddc00 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000000008c0430_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000000008c07f0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000000008c04d0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000000008c07f0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000000008c04d0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000000008c0430_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 14 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "full_adder_tb.v";
+    "full_adder.v";
