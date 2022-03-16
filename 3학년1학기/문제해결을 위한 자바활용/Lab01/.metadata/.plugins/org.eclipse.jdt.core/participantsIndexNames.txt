@@ -1,0 +1,7 @@
+INDEX VERSION 1.131
+C:\Users\jihyeon.DESKTOP-R4U5I8I\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2307657794.index
+\TestImplicitObject\src\main\java
+C:\Users\jihyeon.DESKTOP-R4U5I8I\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4157127603.index
+\TestJSP\src\main\java
+C:\Users\jihyeon.DESKTOP-R4U5I8I\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2095936762.index
+\HelloJSP\src\main\java

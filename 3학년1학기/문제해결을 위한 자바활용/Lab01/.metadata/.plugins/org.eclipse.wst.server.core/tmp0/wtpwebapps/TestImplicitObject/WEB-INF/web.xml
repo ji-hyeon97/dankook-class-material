@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+	<servlet>
+		<servlet-name>welcomeServlet</servlet-name>
+		<jsp-file>/test-config-result.jsp</jsp-file>	
+		<init-param>
+			<param-name>courseBlog</param-name>
+			<param-value>dis.dankook.ac.kr/lectures/</param-value>
+		</init-param> 
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>welcomeServlet</servlet-name>
+		<url-pattern>/test-config-result.jsp</url-pattern>
+	</servlet-mapping>
+
+	<context-param>
+    	<param-name>appName</param-name>
+    	<param-value>Advanced Java Programming</param-value>
+	</context-param>
+
+	<error-page>  
+  		<exception-type>java.lang.Exception</exception-type>  
+  		<location>/test-isErrorPage.jsp</location>  
+	</error-page>
+
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>	
+</web-app>
